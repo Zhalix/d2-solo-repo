@@ -2,6 +2,13 @@
 The official repo for the program Destiny 2 Solo Enabler, or shorthand: D2SE.
 Further down the page exists an FAQ, which should hopefully answer any questions you might have. However if you are still left with questions, create an Issue, and I'll respond to you!
 
+### Notice
+Currently, as of 07/03/2022, there are some issues.
+While the program still works, there seems to be an issue where the game sometimes crashes after some time. This time period can be anything from 15 minutes to multiple hours.
+I do not know if it works, but a thing to try would be to disable the program after each run of a strike, and then enable it again for the next strike. Again, I'm not sure if it'd work or not.
+
+But as mentioned, the program does still block people from joining your fireteam, and the reports seems to indicate that it's primarily in Vanguard Ops it crashes.
+
 ## FAQ
 
 ### What is D2SE?
@@ -10,7 +17,10 @@ It works on any matchmade activity, i.e. strikes, patrol zones, story missions, 
 
 For people simply curious as to how the program looks (I'm one of those people, wondering about the UI/UX before downloading a program), I've decided to include this image.
 
-![Image depicting the UI of the Destiny 2 Solo Enabler program.](https://i.imgur.com/b0s1VTP.png)
+![Image depicting the UI of the Destiny 2 Solo Enabler program. Program turned off currently.](https://i.imgur.com/M579sMb.png)
+![Program turned on currently.](https://i.imgur.com/Y9o3DmP.png)
+
+Note: This is the new design. If you're interessted in the old design, download a release from before v2.
 
 ### How does one use D2SE?
 When you have downloaded the program, you start up Destiny 2. Make sure you're in orbit, then you alt-tab out and enable the program. After doing this, you can search for a strike, forge, or whatever. When you want to turn it off, simply click the button in the program once again.
@@ -35,6 +45,12 @@ That is the reason for the prompt asking for admin priviledges. Windows has made
 ### The program does not work! Why?
 Make sure you're giving it admin priviledges. Other than that, make sure you have the .NET Framework installed (should be preinstalled on any newer Windows 10 installation, but if you are having issues, try reinstalling the latest version).
 You also need to make sure you actually have the Windows firewall activated. The program relies on it, therefore it won't function without it.
+
+### Does it work with other Firewalls than the Windows one?
+No, unfortunately not. It uses namespaces which works with the Windows Firewall, and not thirdparty ones (e.g. Kaspersky). 
+So make sure you're only using the Windows one.
+
+Note: I haven't tested it myself, but one person has reported you can disable the third party Firewall while using the program, and then it should work. So if you run into problems, try disabling your third party Firewall, start the program, and when you close the program again, turn on your third party Firewall.
 
 ### Does it mean my firewall will be filled with a lot of wasteful rules after using this program a few times?
 No! Don't worry. I was contemplating on just letting the firewall rules stay, and simply disabling them. However, I know that I'd find it annoying if I were to find unused firewall rules. So I made sure the programs goes in and deletes whatever rules it creates, when you (the user) decides to disable the program.
@@ -68,6 +84,8 @@ It's an amazing series. Can only recommend it to people. A funny show which held
 Finding out what ports to block was not my doing. On the DestinyTheGame subreddit there already exists a PowerShell script which does what my program does. That is from where I got the port range. I would love to be able to just thank the creator of the script, however I can't seem to find out who exactly created it. Many users has posted the same script many times. So let this be a **thank you** to every single person out there posting the script!
 
 In regards to the creation of the firewall rule, [one specific stackoverflow post](https://stackoverflow.com/a/34018032) has my eternal gratitude. This is the combined result of users [David Christiansen](https://stackoverflow.com/users/20406/david-christiansen) and [Heo Đất Hades](https://stackoverflow.com/users/2958737/heo-%c4%90%e1%ba%a5t-hades).
+
+Massive shoutout to Github user [dheif](https://github.com/dheif). He came up with the design for the new UI, and also coded the "About" section of the program. So thank you very much!
 
 ## Ending notes
 This project has been fun so far. Having to start from scratch and search up everything on your own, using whatever resources you might find, having to decide what is actually useful and what's isn't. I know I'll be using this program from now on, and I hope whoever might do the same also has a good experience with it!
