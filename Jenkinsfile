@@ -6,18 +6,18 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'make' 
+                echo 'building' 
             }
         }
         stage('Test'){
             steps {
-                sh 'make check'
-                junit 'reports/**/*.xml' 
+                echo 'testing'
+               
             }
         }
         stage('Deploy') {
             steps {
-                sh 'make publish'
+                echo 'deplying'
             }
         }
     }
